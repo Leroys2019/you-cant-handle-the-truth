@@ -8,6 +8,10 @@ import static org.junit.Assert.assertEquals;
 public class HandleTruthTest {
     @Test
     public void makeshiftTest() {
+        assertTrue(true);
+    }
+    @Test
+    public void finalTest() {
         String[] input = {
                 "hi",
                 "hello",
@@ -73,5 +77,17 @@ public class HandleTruthTest {
         Set<String> set55 = new HashSet<>(Arrays.asList("code", "work"));
         answer5.put(3, set55);
 
+        TreeMap<Integer, Set<String>>[] Cases = new TreeMap[5];
+        Cases[1] = answer1;
+        Cases[2] = answer2;
+        Cases[3] = answer3;
+        Cases[4] = answer4;
+        Cases[5] = answer5;
+
+        for(int i = 0; i < 6; i++){
+            TreeMap<Integer, Set<String>> expected = Cases[i];
+            TreeMap<Integer, Set<String>> actual = HandleTruth.wordCount(input[i]);
+            assertEquals(expected, actual);
+        }
     }
 }
