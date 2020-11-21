@@ -11,9 +11,9 @@ public class HandleTruthTest {
         String[] input = {
                 "hi",
                 "hello",
-                "this code is done done done",
-                "yes this code will work",
-                "this is the last one",
+                "this code is done done",
+                "yes this  code code will work work",
+                "this is is is the last one",
         };
         //1st input
         TreeMap<Integer , Set<String>> answer1 = new TreeMap<>(Collections.reverseOrder());
@@ -43,23 +43,35 @@ public class HandleTruthTest {
         Set<String> set33 = new HashSet<>(Arrays.asList("done"));
         answer3.put(2, set33);
         //4th input
-        TreeMap<Integer , Set<String>> answer1 = new TreeMap<>(Collections.reverseOrder());
-        String[] answer1S = {
-                "hi",
+        TreeMap<Integer , Set<String>> answer4 = new TreeMap<>(Collections.reverseOrder());
+        String[] answer4S = {
+                "yes",
+                "this",
+                "code",
+                "code",
+                "will",
+                "work",
+                "work",
         };
-        Set<String> set1 = new HashSet<>(Arrays.asList(answer1S));
-        answer1.put(1, set1);
+        Set<String> set4 = new HashSet<>(Arrays.asList("yes", "this", "will"));
+        answer4.put(1, set4);
+        Set<String> set44 = new HashSet<>(Arrays.asList("code", "work"));
+        answer4.put(2, set44);
         //5th input
-        TreeMap<Integer , Set<String>> answer1 = new TreeMap<>(Collections.reverseOrder());
-        String[] answer1S = {
-                "hi",
+        TreeMap<Integer , Set<String>> answer5 = new TreeMap<>(Collections.reverseOrder());
+        String[] answer5S = {
+                "this",
+                "is",
+                "is",
+                "is",
+                "the",
+                "last",
+                "one",
         };
-        Set<String> set1 = new HashSet<>(Arrays.asList(answer1S));
-        answer1.put(1, set1);
-
-
-
+        Set<String> set5 = new HashSet<>(Arrays.asList("yes", "this", "will"));
+        answer5.put(1, set5);
+        Set<String> set55 = new HashSet<>(Arrays.asList("code", "work"));
+        answer5.put(3, set55);
 
     }
-}
 }
